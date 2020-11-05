@@ -1091,10 +1091,10 @@ namespace PdfSharp.Pdf.IO
                             {
                                 // Found the keyword "obj", but ID or generation did not match.
                                 // There is a tool where ID is off by one. In this case we use the ID from the object, not the ID from the XRef table.
-                                if (generation == generationChecked && id == idChecked + 1)
-                                    idToUse = idChecked;
-                                else
-                                    ParserDiagnostics.ThrowParserException("Invalid entry in XRef table, ID=" + id + ", Generation=" + generation + ", Position=" + position + ", ID of referenced object=" + idChecked + ", Generation of referenced object=" + generationChecked);  // TODO L10N using PSSR.
+                                // if (generation == generationChecked && id == idChecked + 1)
+                                idToUse = idChecked;
+                                //else
+                                //    ParserDiagnostics.ThrowParserException("Invalid entry in XRef table, ID=" + id + ", Generation=" + generation + ", Position=" + position + ", ID of referenced object=" + idChecked + ", Generation of referenced object=" + generationChecked);  // TODO L10N using PSSR.
                             }
                             //!!!new 2018-03-14 end
 #endif
